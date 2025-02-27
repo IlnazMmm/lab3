@@ -3,9 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Alignment"
              x:Class="Alignment.MainPage">
+    <VerticalStackLayout Spacing="30">
+        <BoxView Color="Silver" HeightRequest="40" />
+        <BoxView Color="Blue" HeightRequest="40" />
+        <BoxView Color="Gray" HeightRequest="40"/>
+    </VerticalStackLayout>
 
+    <HorizontalStackLayout Spacing="30">
+        <BoxView Color="Silver" WidthRequest="40" />
+        <BoxView Color="Blue" WidthRequest="40" />
+        <BoxView Color="Gray" WidthRequest="40" />
+    </HorizontalStackLayout>
     <Grid Padding="20" RowSpacing="10" RowDefinitions="50,50,*">
-
+        <StackLayout x:Name="stack" Orientation="Horizontal">
+            <BoxView Color="Silver" WidthRequest="40"/>
+            <BoxView Color="Blue" WidthRequest="40"/>
+            <BoxView Color="Gray" WidthRequest="40"/>
+        </StackLayout>
         <HorizontalStackLayout Grid.Row="0" Spacing="10">
             <Label Text="Horizontal" VerticalOptions="Center" />
             <Button Text="Start"  Clicked="OnHorizontalStartClicked"  />

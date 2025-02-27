@@ -5,8 +5,16 @@ public partial class MainPage : ContentPage
 
 	public MainPage()
 	{
-		InitializeComponent();
-	}
+        InitializeComponent();
+
+        var a = new BoxView { Color = Colors.Silver, HeightRequest = 40 };
+        var b = new BoxView { Color = Colors.Blue, HeightRequest = 40 };
+        var c = new BoxView { Color = Colors.Gray, HeightRequest = 40 };
+
+        stack.Children.Add(a);
+        stack.Children.Add(b);
+        stack.Children.Add(c);
+    }
 
     void OnHorizontalStartClicked(object sender, EventArgs e) { target.HorizontalOptions = LayoutOptions.Start; }
     void OnHorizontalCenterClicked(object sender, EventArgs e) { target.HorizontalOptions = LayoutOptions.Center; }
